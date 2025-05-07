@@ -48,9 +48,10 @@ export default {
   },
   methods: {
     handleLogin() {
-      // const success = this.authStore.login(this.username, this.password);
+      const success = this.authStore.login(this.username, this.password);
   
-      this.router.push('/dashboard');
+      this.router.push('/dashboard'); // remover quando for fazzer integracao com api
+
       if (success) {
         this.router.push('/dashboard');
       } else {
