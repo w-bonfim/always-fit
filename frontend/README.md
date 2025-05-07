@@ -1,29 +1,48 @@
-# frontend
+# always-fit
 
-This template should help get you started developing with Vue 3 in Vite.
+Plataforma desenvolvida para auxiliar os usuários no acompanhamento e gerenciamento da rotina de treinos
 
-## Recommended IDE Setup
+## Requisitos
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- PHP >= 8.2
+- Composer
+- Node.js 
+- npm
 
-## Customize configuration
+## Clonar o repositório**
+   git clone https://github.com/w-bonfim/always-fit
+   cd always-fit
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Instalar as dependências
 
-## Project Setup
+composer install
+npm install # ou yarn install
 
-```sh
-npm install
-```
+## Configuração do ambiente
+- cp .env.example .env
+  
+## Configure o acesso ao banco de dados no arquivo .env:
 
-### Compile and Hot-Reload for Development
+  -DB_CONNECTION=mysql
+  -DB_HOST=127.0.0.1
+  -DB_PORT=3306
+  -DB_DATABASE=nome_do_seu_banco
+  -DB_USERNAME=seu_usuario
+  -DB_PASSWORD=sua_senha
+   
+## Executar as migrations e seeds
 
-```sh
-npm run dev
-```
+-php artisan migrate
 
-### Compile and Minify for Production
+## Se desejar, também pode-se popular o banco de dados com dados de exemplo (opcional):
 
-```sh
-npm run build
-```
+-php artisan db:seed
+
+## Compilar os assets
+
+-npm run dev
+
+## Iniciar o servidor de desenvolvimento
+   
+-php artisan serve
+
